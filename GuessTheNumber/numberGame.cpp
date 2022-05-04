@@ -181,8 +181,9 @@ void NumberGame::startGame(int level) {
     // If the treis 0 and player no longer has the money : 
     if (getTries() == 0 && getPlayerMoney() == 0) {
         // Print message and return back to the original menu.
-        cout << "You Lost!" << endl;
-        cout << "Better luck next time." << endl;
+        cout << "You lost, $" << bet << endl;
+        cout << "You lost all your money..." << endl;
+        cout << "Better luck next time!" << endl;
         return;
     
     // If the tries 0 but player has the moeny : 
@@ -191,11 +192,10 @@ void NumberGame::startGame(int level) {
         int choice;
 
         // Menu.
-        cout << "You lost, $" << bet << endl;
         cout << "Your current money : $" << getPlayerMoney() << endl;
         cout << "\nChoose from the following options " << getPlayerName() << " : " << endl;
         cout << "1 : Play Again." << endl;
-        cout << "2 : Leave." << endl;
+        cout << "2 : Take me to main menu." << endl;
 
         // Getting input from the user.
         cout << "Choice : ";
